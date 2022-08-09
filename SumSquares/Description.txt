@@ -1,0 +1,17 @@
+Develop a REST/JSON web API in Python or Java that accepts an array of numeric inputs and performs the following:
+Finds the highest 3 numbers
+Computes the square root of the sum of squares of the 3 highest numeric inputs. The following is an example input:
+ 
+{
+                “data”: [5,4,6,1]
+}
+ 
+The output expected would be:
+{
+                “output”: 8.77
+}
+ 
+Please use Maven to manage any dependencies if using Java. 
+The code must make use of Python Lambda functions (https://book.pythontips.com/en/latest/map_filter.html) 
+or Java Streams to compute the result. We encourage you to use the Spring framework if using Java, 
+particularly to accelerate the development time for the web api. Please include unit tests
