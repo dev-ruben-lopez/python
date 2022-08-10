@@ -38,7 +38,7 @@ Response should be
 ## Test
 
 While running flask, run in another terminal window the file tester.py
-You whould get the next results:
+You should get the next results:
 
 ```python
 (.venv)> SumSquares % python tester.py                                
