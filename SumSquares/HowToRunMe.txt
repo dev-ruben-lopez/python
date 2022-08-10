@@ -12,7 +12,7 @@ This program is using venv (virtual environment) for python 3.8 and Flask as a l
 Go to the address that is specified in:
 
 In a second terminal window, execute the tester, or, if using POSTMAN go to the address:
-http://127.0.0.1:5000/highestnumbers
+http://127.0.0.1:5000/sumofsquares
 
 Set Request Data to json, and enter in body:
 {"data": [5,4,6,1]}

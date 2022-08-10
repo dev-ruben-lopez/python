@@ -1,9 +1,12 @@
+#Ruben D. Lopez - Aug 2022
+#This program will test the website methods published using HowToRunMe.txt
+
 import json
 import requests
 
 
 #Correct answer 8.77
-url = "http://127.0.0.1:5000/highestnumbers"
+url = "http://127.0.0.1:5000/sumofsquares"
 jsonInput = """{"data": [5,4,6,1]}"""
 headers = {'Content-Type': 'application/json'}
 
@@ -13,7 +16,7 @@ print(res.text)
 
 
 #Correct answer 80.22
-url = "http://127.0.0.1:5000/highestnumbers"
+url = "http://127.0.0.1:5000/sumofsquares"
 jsonInput = """{"data": [8,6,2,12,44,66]}"""
 headers = {'Content-Type': 'application/json'}
 
@@ -23,7 +26,7 @@ print(res.text)
 
 
 #Must return "Error: List must contain at least 3 numbers." 
-url = "http://127.0.0.1:5000/highestnumbers"
+url = "http://127.0.0.1:5000/sumofsquares"
 jsonInput = """{"data": [5,4]}"""
 headers = {'Content-Type': 'application/json'}
 
@@ -32,7 +35,7 @@ print(res.text)
 
 
 #Must return "Error: List must contain only numbers." 
-url = "http://127.0.0.1:5000/highestnumbers"
+url = "http://127.0.0.1:5000/sumofsquares"
 jsonInput = """{"data": [5, 4, "S"]}"""
 headers = {'Content-Type': 'application/json'}
 
