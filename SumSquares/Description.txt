@@ -3,12 +3,12 @@ Finds the highest 3 numbers
 Computes the square root of the sum of squares of the 3 highest numeric inputs. The following is an example input:
  
 {
-                “data”: [5,4,6,1]
+    “data”: [5,4,6,1]
 }
  
 The output expected would be:
 {
-                “output”: 8.77
+    “output”: 8.77
 }
  
 Please use Maven to manage any dependencies if using Java. 
