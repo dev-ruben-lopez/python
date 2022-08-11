@@ -5,7 +5,7 @@ This program is using venv (virtual environment) for python 3.8 and Flask as a l
 1- Go on terminal to this folder locationa and run: 
 
 >source .venv/bin/activate
->export FLASK_APP=webapp.py
+>export FLASK_APP=app.py
 >export FLASK_ENV=development
 >flask run
 

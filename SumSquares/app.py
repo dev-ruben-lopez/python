@@ -9,7 +9,7 @@ parser = reqparse.RequestParser()
 parser.add_argument('list', type=list)
 
 #GET() POST() sumofsquares
-@app.route('/sumofsquares/', methods = ['POST', 'GET'])
+@app.route('/sumofsquares', methods = ['POST', 'GET'])
 def get():
         print("Start...") #terminal tracing
         parserArgs = parser.parse_args()
@@ -57,5 +57,7 @@ def get():
 
 @app.route('/')
 def index():
-        return 'Main Page. Try ../sumofsquares/ from POSTMAN or other API tester tool.'
+        return 'Main Page. Try ../sumofsquares/from POSTMAN or other API tester tool.'
 
+if __name__ == '__main__':
+   app.run()
