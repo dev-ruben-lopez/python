@@ -9,7 +9,7 @@ This program is using venv (virtual environment) for python 3.8 and Flask as a l
 ```python
 >source .venv/bin/activate
 
->export FLASK_APP=webapp.py
+>export FLASK_APP=app.py
 
 >export FLASK_ENV=development
 
