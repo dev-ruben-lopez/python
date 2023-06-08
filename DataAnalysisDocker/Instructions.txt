@@ -1,0 +1,53 @@
+******DO Data Analysis in a Container with Python and Sweetviz******
+
+https://analyticsindiamag.com/step-by-step-guide-to-data-analysis-using-sweetviz/
+
+To create a ubuntu docker container:
+https://www.makeuseof.com/run-ubuntu-as-docker-container/
+
+Then, install python3
+
+After, install sweetviz
+https://github.com/fbdesignpro/sweetviz
+
+Remember, that version is importing pandas and numpy with latest versions, and
+it has incompatibilities. Must reinstall pandas to version:   1.5.3
+and numpy to version: 1.23.1
+
+>pip install numpy==1.23.1
+>pip install pandas==1.5.1
+
+To run the docker image in a container, and then use bash terminal 
+to keep it open:
+>docker run -ti --rm ubupy01 /bin/bash
+
+Remember, docker will start and close any container if there is nothing to do. 
+That is why you need to run it with the bash command at the end.
+the -ti is for interactive mode, and the rm is to stop and remove the container
+when we exit.
+
+When entering in >python3, this is the commands to get a csv data file and 
+do some analysis in the python image. 
+
+Install sweetviz first, to do analysis and comparisons of datasets.
+
+Then import it as a html and move the html to another container with nginx to
+display the report.
+
+
+
+
+import pandas as pd
+penguins = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
+x = penguins.drop('species', axis=1)
+y = penguins['species']
+import sweetviz as sv
+analyze_report = sv.analyze(penguins)
+analyze_report.show_html('analyze.html')
+
+
+Finally, move the file from the container, to the host for display it on 
+a browser:
+
+docker cp e8d8cd38e2b7:/analyze.html analyze.html
+
